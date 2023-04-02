@@ -1,0 +1,31 @@
+{
+  "name": "iyzipay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx @babel/node",
+    "dev": "babel src --out-dir=./build --copy-files --watch",
+    "build": "babel src --out-dir=./build --copy-files",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustafaztrk/Iyzipay.git"
+  },
+  "author": "Mustafa Öztürk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mustafaztrk/Iyzipay/issues"
+  },
+  "homepage": "https://github.com/mustafaztrk/Iyzipay#readme",
+  "dependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.3",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.21.0",
+    "iyzipay": "^2.0.48",
+    "nanoid": "^3.0.0"
+  }
+}
