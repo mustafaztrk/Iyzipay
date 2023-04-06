@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "npx @babel/node",
-    "dev": "babel src --out-dir=./build --copy-files --watch",
-    "build": "babel src --out-dir=./build --copy-files",
+    "dev": "npx nodemon --exec npx @babel/node ./src/index.js dev --watch",
+    "build": "npx babel src --out-dir=./build --copy-files",
+    "production":"npm run build && node ./build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,7 +26,25 @@
     "@babel/node": "^7.20.7",
     "@babel/preset-env": "^7.20.2",
     "@babel/register": "^7.21.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "helmet": "^6.0.1",
+    "https": "^1.0.0",
     "iyzipay": "^2.0.48",
-    "nanoid": "^3.0.0"
+    "jsonwebtoken": "^9.0.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "mongoose": "^7.0.3",
+    "morgan": "^1.10.0",
+    "nanoid": "^3.0.0",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }
